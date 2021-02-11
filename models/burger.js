@@ -16,7 +16,7 @@ insertOne: function(col, colVal, cb){
 
 updateOne: function(col, colVal, condition, cb){
 
-    orm.updateOne(col, colVal, condition, fucntion(res){
+    orm.updateOne(col, colVal, condition, function(res){
         cb(res)
     })
 }
