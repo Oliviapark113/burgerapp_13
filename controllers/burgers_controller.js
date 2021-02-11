@@ -4,11 +4,12 @@ var router = express.Router();
 var burger = require("../models/burger.js");
 
 
+
 router.get("/", function(req, res) {
 
-    res.render("index", {burgers:res});
+    res.render("index");
   });
-});
+
 
 // router.post("/api/cats", function(req, res) {
 //   cat.create([

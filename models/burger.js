@@ -1,9 +1,35 @@
-const orm = require('./config/orm.js')
+const orm = require('../config/orm.js')
 
-orm.selectAll()
-orm.insertOne()
-orm.updateOne()
+var burger ={
+
+selectAll: function(cb){
+     orm.selectAll("burgers", function(res){
+         cb(res);
+     })
+},
+
+insertOne: function(col, colVal, cb){
+    orm.insertOne(col, colVal, function(res){
+        cb(res);
+    })
+},
+
+updateOne: function(col, colVal, condition, cb){
+
+    orm.updateOne(col, colVal, condition, fucntion(res){
+        cb(res)
+    })
+}
 
 
 
-module.exports = burgers;
+
+}
+
+// orm.selectAll()
+// orm.insertOne()
+// orm.updateOne()
+
+
+
+module.exports = orm;
