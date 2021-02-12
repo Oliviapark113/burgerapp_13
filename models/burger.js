@@ -8,6 +8,12 @@ selectAll: function(cb){
      })
 },
 
+selectOne: function(condition, cb){
+     orm.selectOne("burgers",condition, function(res){
+         cb(res);
+     })
+},
+
 insertOne: function(col, colVal, cb){
     orm.insertOne(col, colVal, function(res){
         cb(res);
@@ -15,13 +21,12 @@ insertOne: function(col, colVal, cb){
 },
 
 updateOne: function(col, colVal, condition, cb){
-
+    console.log(col, colVal, condition)
     orm.updateOne(col, colVal, condition, function(res){
+
         cb(res)
     })
 }
-
-
 
 
 }

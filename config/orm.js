@@ -16,6 +16,19 @@ let queryString= "SELECT * FROM ??"
 
 }, 
 
+
+selectOne:function(tableInput, condition, cb){
+    let queryString= "SELECT * FROM ?? WHERE ? ;"
+      connection.query(queryString, [tableInput, condition], function(err, result) {
+        if (err) {
+            throw err;
+        }
+        cb(result);
+        });
+
+
+},
+
 insertOne: function(col, colVal, cb){
     let queryString = "INSERT INTO burgers (??) VALUES (?);"
 
