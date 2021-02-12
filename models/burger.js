@@ -26,10 +26,8 @@ updateOne: function(col, colVal, condition, cb){
 
 }
 
-// orm.selectAll()
-// orm.insertOne()
-// orm.updateOne()
 
 
 
-module.exports = orm;
+
+module.exports = burger;

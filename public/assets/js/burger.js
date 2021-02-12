@@ -8,11 +8,10 @@ $("form").on("submit", function(e){
 
 //POST 
 $.ajax({
-   url: '/',
-   methos: 'POST',
-   data: {
-       burger:textarea.val()
-   }
+   url: "/",
+   method: 'POST',
+   data: {burger_name:textarea.val()}
+   
 }).then(response =>{
     console.log(response)
     location.reload();

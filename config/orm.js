@@ -5,9 +5,9 @@ const orm =
 {
 
 selectAll:function(tableInput , cb){
-let queryString= "SELECT * FROM; " + tableInput + ";"
+let queryString= "SELECT * FROM ??"
 
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, [tableInput], function(err, result) {
         if (err) {
             throw err;
         }
