@@ -9,7 +9,7 @@ var burger = require("../models/burger.js");
 
 router.get("/", function(req, res) {
    burger.selectAll(function(data){
-      // console.log(data)
+
     res.render("index", {burgers:data});
    })
   });
@@ -49,12 +49,7 @@ router.put("/:id", function(req, res) {
      })
 
 
-   
-
-  // burger.updateOne("burger_name", req.body.burger_name, {id:req.params.id} , function(data){
-
-  //   res.status(200).send()
-  // })
+  
  
 });
 

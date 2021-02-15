@@ -15,7 +15,7 @@ $("form").on("submit", function(e){
       }).then(response =>{
         console.log(response)
         location.reload();
- })
+     }).catch(err => {console.log(err)})
 
 })
 
@@ -38,10 +38,6 @@ function updateBurger(){
             .catch(err => {console.log(err)})
     
     }
-
-
-
-
 
 
 
