@@ -5,7 +5,6 @@
  - [Description](#description)
  - [Installation](#installation)
  - [User Stroy](#userstory)
-  - [Business Context](#businesscontext)
  - [Contributing](#contributing)
  - [Credits](#credits)
  - [License](#license)
